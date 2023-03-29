@@ -49,6 +49,14 @@ def convertToPDF(output_filename, output_path, new_filename):
         print(e)
         print("Failed to convert " + new_filename)
 
+def copyMarkdownFileAndWriteREADME(file):
+    with open(file, "r") as f:
+        s = f.read()
+    split = file.split('/')
+    split[len(split) - 1] = 'README.md'
+    with open('/'.join(split), "w") as f:
+        f.write(s)
+
 def pushAllNotes():
     repo = Repo('./')
     repo.git.add('--all')
@@ -75,6 +83,7 @@ def downloadAndConvertAllNotes(database_id):
         new_filename = output_path + "/" + title + '.md'
         os.rename(curr_filename, new_filename)
 
+        copyMarkdownFileAndWriteREADME(new_filename)
         with open(new_filename, "r") as f:
             s = f.read()
 
@@ -83,8 +92,9 @@ def downloadAndConvertAllNotes(database_id):
 
         output_filename = new_filename.replace(".md", ".pdf")
         convertToPDF(output_filename, output_path, new_filename)
+        os.remove(new_filename)
         time.sleep(3)
-
+    pushAllNotes()
 
 database_id = "5723db6fec26453e9ba04f9858845f6d"
 downloadAndConvertAllNotes(database_id)

@@ -10,7 +10,7 @@ $$ D_{chebyshev}(x,y) = max_{i}^{n}(x_i, y_i) $$
 
 **Hamming Distance:**
 
-For equal-length strings, the hamming distance is the number of pairs of characters (a, b) where a != b and a and b have the same index in their respective strings
+For equal-length strings, the hamming distance is the number of pairs of characters (a, b) where a ≠ b and a and b have the same index in their respective strings
 
 **Edit Distance:**
 
