@@ -70,8 +70,9 @@ def copyMarkdownFileAndWriteREADME(file):
 def pushAllNotes():
     repo = Repo('./')
     repo.git.add('--all')
-    now = datetime.now
-    repo.index.commit('Automated Update - {}'.format(now))
+    now = datetime.now()
+    date_time =  now.strftime("%m/%d/%Y, %H:%M:%S")
+    repo.index.commit('Automated Update - {}'.format(date_time))
     origin = repo.remotes[0]
     origin.push()
 
