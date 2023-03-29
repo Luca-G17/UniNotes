@@ -13,6 +13,12 @@ from datetime import datetime
 # Then rename each one to its Title
 # Export each one to to html
 
+def linePrepender(filename, line):
+    with open(filename, 'r+') as f:
+        content = f.read()
+        f.seek(0, 0)
+        f.write(line.rstrip('\r\n') + '\n' + content)
+
 def removeOldFiles(dir):
     if os.path.exists(dir):
         files = os.listdir(dir)
@@ -34,6 +40,10 @@ def downloadFile(page_id, output_path, module, title):
             markdown_exported = True
         except:
             time.sleep(3)
+    curr_filename = output_path + "/" + page_id + '.md'
+    new_filename = output_path + "/" + title + '.md'
+    os.rename(curr_filename, new_filename)
+    return new_filename
 
 def convertToPDF(output_filename, output_path, new_filename):
     pandoc_options = [
@@ -77,11 +87,8 @@ def downloadAndConvertAllNotes(database_id):
         output_path = "./notes/" + module + "/" + title
 
         removeOldFiles(output_path)
-        downloadFile(page_id, output_path, module, title)
-        
-        curr_filename = output_path + "/" + page_id + '.md'
-        new_filename = output_path + "/" + title + '.md'
-        os.rename(curr_filename, new_filename)
+        new_filename = downloadFile(page_id, output_path, module, title)
+        linePrepender(new_filename, "# " + title)
 
         copyMarkdownFileAndWriteREADME(new_filename)
         with open(new_filename, "r") as f:

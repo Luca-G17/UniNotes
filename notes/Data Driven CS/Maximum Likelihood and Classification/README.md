@@ -1,3 +1,4 @@
+# Maximum Likelihood and Classification
 **Maximum Likelihood:**
 
 Maximum Likelihood fundamentally uses a probability distribution over a dataset.

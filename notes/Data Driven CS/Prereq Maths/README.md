@@ -1,3 +1,4 @@
+# Prereq Maths
 **Inner Product:**
 
 a = Nx1 vector

@@ -1,3 +1,4 @@
+# Distance Measures
 **P-Norm Distances:**
 
 $$ D(x,y) = (\sum_{i=1}^{n} |x_i-y_i|^p)^{\frac{1}{p}} $$

@@ -1,3 +1,4 @@
+# Regression
 The sum of the vertical distances between data points and a prediction line can act as a quantifier of how good this prediction is.
 
 **Loss Function (Naive):**

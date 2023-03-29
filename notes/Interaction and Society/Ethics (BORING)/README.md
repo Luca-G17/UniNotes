@@ -1,3 +1,4 @@
+# Ethics (BORING)
 **Normative Ethics: :(**
 
 Consequentialist - choose actions that are likely to have good outcomes, considering outcomes for all stakeholders (Utilitarianism)
