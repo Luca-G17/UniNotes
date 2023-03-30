@@ -1,17 +1,37 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 from notion2md.exporter.block import MarkdownExporter
-from grip import export
 from notion_client import Client
 import os
 import time
 import pypandoc
-from anyascii import anyascii
 from git import Repo
 from datetime import datetime
+from email.message import EmailMessage
+import ssl
+import smtplib
 
 # First get all block ids for pages inside the table
 # Next export them all to ./{page_id}/ unzipped
 # Then rename each one to its Title
 # Export each one to to html
+
+def sendErrorEmail(error):
+    sender = os.getenv("SENDER_EMAIL")
+    password = os.getenv("SENDER_PASSWORD")
+    receiver = os.getenv("RECEIVER_EMAIL")
+    subject = "Automated Notion Backup: ERROR"
+    body = error
+    em = EmailMessage()
+    em['From'] = sender
+    em['To'] = receiver
+    em['Subject'] = subject
+    em.set_content(body)
+
+    context = ssl.create_default_context()
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+        smtp.login(sender, password)
+        smtp.sendmail(sender, receiver, em.as_string())
 
 def linePrepender(filename, line):
     with open(filename, 'r+') as f:
@@ -105,6 +125,7 @@ def downloadAndConvertAllNotes(database_id):
     pushAllNotes()
 
 database_id = "5723db6fec26453e9ba04f9858845f6d"
-downloadAndConvertAllNotes(database_id)
-
-
+try:
+    downloadAndConvertAllNotes(database_id)
+except Exception as e:
+    sendErrorEmail(str(e))
