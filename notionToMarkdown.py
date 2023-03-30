@@ -87,8 +87,8 @@ def copyMarkdownFileAndWriteREADME(file):
     with open('/'.join(split), "w") as f:
         f.write(s)
 
-def pushAllNotes():
-    repo = Repo('./')
+def pushAllNotes(path):
+    repo = Repo(path + '/')
     repo.git.add('--all')
     now = datetime.now()
     date_time =  now.strftime("%m/%d/%Y, %H:%M:%S")
@@ -98,6 +98,7 @@ def pushAllNotes():
 
 def downloadAndConvertAllNotes(database_id):
     notion = Client(auth=os.getenv("NOTION_TOKEN"))
+    path = os.getenv("NOTION_PATH")
     allPages = notion.databases.query(database_id)
     for result in allPages['results']:
         # Get page_id, module name and page title
@@ -105,7 +106,7 @@ def downloadAndConvertAllNotes(database_id):
         module = result['properties']['Class']['select']['name']
         title = result['properties']['Name']['title'][0]['plain_text']
         title = title.replace("/", "+")
-        output_path = "./notes/" + module + "/" + title
+        output_path = path + "/notes/" + module + "/" + title
 
         removeOldFiles(output_path)
         new_filename = downloadFile(page_id, output_path, module, title)
@@ -122,7 +123,7 @@ def downloadAndConvertAllNotes(database_id):
         convertToPDF(output_filename, output_path, new_filename)
         os.remove(new_filename)
         time.sleep(3)
-    pushAllNotes()
+    pushAllNotes(path)
 
 database_id = "5723db6fec26453e9ba04f9858845f6d"
 try:
