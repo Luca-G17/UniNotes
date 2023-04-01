@@ -47,7 +47,7 @@ def removeOldFiles(dir):
 
 def removeUnicodeChars(string):
     string = string.replace('≠', '!=')
-    string = string.replace('≥', '>=') 
+    string = string.replace('≥', '>=')
     string = string.replace('≤', '<=')
     return string
 
@@ -88,7 +88,7 @@ def copyMarkdownFileAndWriteREADME(file):
         f.write(s)
 
 def pushAllNotes(path):
-    repo = Repo(path + '/')
+    repo = Repo('./')
     repo.git.add('--all')
     now = datetime.now()
     date_time =  now.strftime("%m/%d/%Y, %H:%M:%S")
@@ -106,7 +106,7 @@ def downloadAndConvertAllNotes(database_id):
         module = result['properties']['Class']['select']['name']
         title = result['properties']['Name']['title'][0]['plain_text']
         title = title.replace("/", "+")
-        output_path = path + "/notes/" + module + "/" + title
+        output_path = "./notes/" + module + "/" + title
 
         removeOldFiles(output_path)
         new_filename = downloadFile(page_id, output_path, module, title)
