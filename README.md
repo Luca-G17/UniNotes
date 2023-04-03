@@ -3,7 +3,7 @@ Python script to automatically download notion pages from a given notion databas
 
 Crontab command for an update every day at 1PM - Prints stdout and stderr to file:
 
-```* 13 * * * cd /path/to/script/directory; /path/to/script/directory/notionToMarkdown.py >> /tmp/notion_log 2>&1```
+```0 13 * * * cd /path/to/script/directory; /path/to/script/directory/notionToMarkdown.py >> /tmp/notion_log 2>&1```
 
 Environment variables:
 Environment variables should can be declared in the crontab file before the cron command above.
