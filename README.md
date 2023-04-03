@@ -1,9 +1,12 @@
 # University Notes Backup - Notion
 Python script to automatically download notion pages from a given notion database and uploads them to github as both markdown files and PDF
 
-Crontab command for an update every day at 1PM - Prints stdout and stderr to file:
+Crontab command for an update every day at 1PM - Prints stdout and stderr to /tmp/notion_log:
 
-```0 13 * * * cd /path/to/script/directory; /path/to/script/directory/notionToMarkdown.py >> /tmp/notion_log 2>&1```
+```
+SHELL=/bin/bash
+0 13 * * * /path/to/script/directory/build.sh
+```
 
 Environment variables:
 Environment variables should can be declared in a file called envvars located in the root of the git directory
