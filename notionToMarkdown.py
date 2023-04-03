@@ -125,7 +125,7 @@ def downloadAndConvertAllNotes(database_id):
         time.sleep(3)
     pushAllNotes(path)
 
-database_id = "5723db6fec26453e9ba04f9858845f6d"
+database_id = os.getenv("DATABASE_ID")
 try:
     downloadAndConvertAllNotes(database_id)
 except Exception as e:
