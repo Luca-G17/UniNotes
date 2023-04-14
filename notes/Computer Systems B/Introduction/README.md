@@ -29,5 +29,5 @@ Security Types:
 
 - Accountability
 
-- 
+- Authorization
 
