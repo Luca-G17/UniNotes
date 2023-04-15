@@ -9,15 +9,15 @@
 
 **Domain Name System:**
 
-DNS will resolve an IP address from a given URL by parsing the nameserver tree until it finds the given domain name. The nameserver then transmits the IP address back to the client. It is unencrypted and easily monitored.
+DNS will resolve an IP address from a given URL by parsing the name-server tree until it finds the given domain name. The name server then transmits the IP address back to the client. It is unencrypted and easily monitored.
 
 **Threats to DNS:**
 
 - Corrupted host platforms
 
-- Resolvers that leak querires
+- Resolvers that leak queries
 
-- Nameservers that leak queries
+- Name-servers that leak queries
 
 - DNS Hijacking
 
