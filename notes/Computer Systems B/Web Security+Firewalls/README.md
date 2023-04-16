@@ -9,7 +9,13 @@ An attacker can manipulate an SQL query via the input data from the client, forc
 
 An attacker sends input JavaScript tags to a web application. When this input is returned to the user unsanitized, the user's browser would execute it. XSS can be as simple as crafting a link and persuading a user to click on it. The script could post the user's cookies to the attacker when they load the webpage.
 
-<br/>
+XSS Types:
+
+- Reflected XSS - Where the malicious script comes from the current HTTP request
+
+- Stored XSS - Where the malicious script comes from the website’s database
+
+- DOM-Based XSS - Where the vulnerability exists in client-side code rather than server-side code
 
 **Firewalls:**
 
@@ -36,6 +42,14 @@ Incapabilities:
 - Protect against new threats
 
 - Protect against viruses/trojans
+
+Firewall Goals:
+
+- All traffic from inside to outside and vice versa, must pass through the firewall. All other traffic is blocked.
+
+- Only authorized traffic, as defined by the local security policy is allowed to pass.
+
+- The firewall itself is immune to penetration.
 
 Only authorized traffic as defined by the local security policy will be allowed to pass through the firewalls. It’s assumed that the firewall itself is immune to penetration.
 
