@@ -57,3 +57,5 @@ The sum of the variances = the sum of Eigenvalues = 100% of the variance in the 
 
 $$ \frac{\sum_{i=1}^d\lambda_i}{\sum_{i=1}^N\lambda_i}=\% \text{ of variance retained after dimensional reduction} $$
 
+<br/>
+
