@@ -123,7 +123,7 @@ It creates a tunnel between the network and the individual, it doesn’t have se
 
 **TLS VPN:**
 
-- Clientless solution - Webised applications - the gateway translates data returned by the applications into web data. It can only access website data. No need to install clients, and lower costs.
+- Clientless solution - Webised applications - the gateway translates data returned by the applications into web data. It can only access website data. No need to install clients and lower costs.
 
 - Non-clientless - Heavy TLS clients however can access any data. Access to a private network similar to a local connection, A IPsec/VPN client is required by the nomad.
 
@@ -143,7 +143,7 @@ It creates a tunnel between the network and the individual, it doesn’t have se
 
 - Largely used for nomads’ remote access protection (VPN)
 
-- According to TLS VPN, solutions provides limited access to certain applications.
+- According to TLS VPN, solutions provide limited access to certain applications.
 
 <br/>
 
