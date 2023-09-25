@@ -155,10 +155,6 @@ This allows processes to be isolated from each, it supports virtual memory much 
 
 - Segments may be very large
 
-	- Need to map the whole segment into memory even to access a single byte
-
-	- Cannot map only part of the segment that is utilized
-
 - Need to find free physical memory large enough to accommodate a segment
 
 - Explicit segment management is not very elegant
