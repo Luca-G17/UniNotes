@@ -43,9 +43,9 @@ $$ \int_{-\infty}^{\infty}f(t)\delta(t)dt=f(0) \rightarrow \int_{-\infty}^{\inft
 
 The sifting property can be used to express a 2D image function as a linear combination of 2D Dirac pulses located at points (a,b) that cover the whole image plane.
 
-<br/>
+$$ \int_{-\infty}^{\infty} $$
 
-Ideally the optical system should map point information to points. However optical systems are not ideal. Each point will have some spread which will be represented by a point spread function. An image is the sim of the PSF of all its points. 
+Ideally, the optical system should map point information to points. However optical systems are not ideal. Each point will have some spread which will be represented by a point spread function. An image is the sum of the PSF of all its points. The Point spread function can be modelled by the Dirac Impulse function.
 
 **Point spread function:**
 
