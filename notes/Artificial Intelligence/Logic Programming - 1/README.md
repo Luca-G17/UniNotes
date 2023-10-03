@@ -36,11 +36,9 @@ Arithmetic operators require grounded arguments.
 
 Logic programming is not classical logic, prolog’s core syntax restricts first-order logic (to definite clausal normal form). Prolog’s core semantics extend first-order logic (to minimal model constructors)
 
-Prolog assumes false atmos with no reason to suggest that they may be true.
+Prolog assumes false atoms with no reason to suggest that they may be true (An atom is a single data item without inherent meaning).
 
-- This allows prolog to compute relations that are not class
-
-<span style='color:red'>FINISH THIS SECTION ONCES SLIDES ARE RELEASED</span>
+- This allows prolog to compute relations that are not classically definable via transitive closure.
 
 <br/>
 
@@ -54,11 +52,13 @@ Propositions: p q - represent unstructured assertions
 
 Predicates: happy/1 loves/2 represent object properties and relations
 
+Functions and predicates have “arities” which is the number of arguments they can take. Constants and propositions have zero arity.
+
 <br/>
 
 For example:
 
-if x(y(z)) is a well-formed ground formula of first-order classical logic where x, y and z are symbols.
+If x(y(z)) is a well-formed ground formula of first-order classical logic where x, y and z are symbols.
 
 X must be a predicate since if it was a function the expression is no longer a formula. y must be a function and z must be a constant.
 
@@ -68,11 +68,13 @@ A term is a constant c, variable X or a function f of arity n applied to an n-tu
 
 An atom is a proposition p or predicate r of arity n applied to an n-tuple of terms.
 
-A formula is an atom; a logical constant; a negation of a formula; a conjunction, a disjunction  
-
-<span style='color:red'>FINISH THIS SECTION ONCE SLIDES ARE RELEASED</span>
+A formula is an atom; a logical constant; a negation of a formula; a conjunction; a disjunction or a conditional.   
 
 <br/>
+
+**Clausal Form:**
+
+The clausal form is the conjunctive normal form (CNF) with the prefix omitted and the matrix written as a set of sets of literals or a set of clauses of the form <head> ← <body> where the head is an (often implicit) disjunction of literals and the body is a conjunction of literals. Prolog is a variation of clausal form where exactly one atom must be used in the head of each clause but nested conjunctions, disjunctions and negations of atoms may be used in the body.
 
 To facilitate the storage of logical formulae in memory and simplify inference procedures it's convenient to transform formulae into some restricted subsets of First-Order Logic (FOL) known as normal forms.
 
