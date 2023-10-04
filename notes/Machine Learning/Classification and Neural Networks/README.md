@@ -33,5 +33,47 @@ In order to find the derivative of the negative log of this model we have to use
 
 $$ \frac{\delta \ln p(t|x,w)}{\delta w}\sum_{n=1}^N(y_n-t_n)x_n =\text{slope} $$
 
-<br/>
+**Neural Networks:**
+
+**Perceptron: **
+
+![Untitled](5e5b5df8_Untitled.png)
+
+$$ f(a)=\begin{cases}+1,a\ge0\\-1,a<0\end{cases}\qquad \text{target: }t=\{+1, -1\}\qquad \text{minimise: }-\sum_{n=1}^Nw^T\phi_nt_n $$
+
+**Forward Pass:**
+
+Compute Activations on hidden layer h:
+
+$$ a_j=\sum_{i=1}^Dw^{(h)}_{ji}x_i+w^{(h)}_{j0} $$
+
+Pass through a nonlinear function, typically sigmoid:
+
+$$ Z_i=\sigma(a_j) $$
+
+Calculate activations on the output layer:
+
+$$ a_k=\sum_{i=1}^Dw^{(h)}_{ki}Z_i+w^{(h)}_{k0} $$
+
+Then compute predications using the sigmoid function.
+
+**Backward pass**
+
+Compute the error (cost) function
+
+$$ E=\frac{1}{2}\sum_{n=1}^N(y(x_n,w)-t_n)^2 $$
+
+Compute the gradients wrt. weights:
+
+$$ \text{Output Weights: }\frac{\delta E}{\delta w_{kj}}=\sigma'(y_n-t_n)Z_j $$
+
+$$ \text{Input Weights: }\frac{\delta E}{\delta w_{kj}}=\sigma'(y_n-t_n)w_{kj}^T\sigma 'x_i $$
+
+We can use these values to update the weights in our neural network:
+
+	 
+
+	$$ w_{ji}=w_{ji}-\sigma'(y_n-t_n)w_{kj}^T\sigma 'x_i \qquad w_{kj}=w_{kj}-\sigma'(y_n-t_n)Z_j $$
+
+	<br/>
 
