@@ -27,9 +27,9 @@ $$ \text{Learning: }a=(K+\lambda I_N)^{-1}t $$
 
 **Classification:**
 
-During classification, there will be many different hyperplanes that will linearly separate the data. We can use a maximum margin classifier to choose the hyperplane that leads to the largest distance between the closest data point to the plane. This will help to reduce overfitting.
+During classification, there will be many different hyperplanes that will linearly separate the data. We can use a maximum margin classifier to choose the hyperplane that leads to the largest distance between the closest data point to the plane. This will help to reduce over fitting.
 
-$$ \argmax_{w,b}\{\frac{1}{||w||}\min[t_n(w^T\phi(x_n)+b)]\} $$
+$$ argmax_{w,b}\{\frac{1}{||w||}\min[t_n(w^T\phi(x_n)+b)]\} $$
 
 <br/>
 
