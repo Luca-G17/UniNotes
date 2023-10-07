@@ -15,6 +15,14 @@ Using multiple features for classification results in a multi-dimensional featur
 
 [//]: # (column_list is not supported)
 
+	[//]: # (column is not supported)
+
+		![Untitled](2b8786b7_Untitled.png)
+
+	[//]: # (column is not supported)
+
+		![Untitled](e2d8094e_Untitled.png)
+
 Speech Recognition:
 
 1. Pre-processing - Digitisation
