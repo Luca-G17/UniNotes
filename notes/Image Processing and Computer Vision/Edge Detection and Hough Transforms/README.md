@@ -37,15 +37,15 @@ Each point in the Hough space is a line defined by its coordinates.
 
 A point(x,y) in the image space is transformed into a sinusoidal curve in the parameter space. Each orientation of lines passing through p(x,y) represents a sinusoidal curve in the Hough transform.
 
+**Line Detection:**
 
-```plain text
-Make available an n=2 dimensional array H(a,b) for the parameter space
-Find the gradient image G(x,y)=|G(x,y)|<G(x,y)
-For any pixel satisfying |G(x,y)| > T increment all elements on the curve a = xcos(b)+ysin(b)
-in the parameter space represented by the H array:
+$$ H(\rho,\theta)=\text{2D Array for parameter space.} \\ \text{1. Find the gradient image: }G(x,y)=|G(x,y)|\angle G(x,y) \\ \text{2. For any pixel satisfying }  |G(x,y)|>T_s \text{, increment all elements on the curve } \\ \rho=x\cos\theta+y\sin\theta \text{ in H:}\\\forall\theta \quad | \quad\rho=x\cos\theta+y\sin\theta \qquad H(\rho,\theta)=H(\rho,\theta)+1\\ \text{3. In the parameter space, any element }H(\rho,\theta)>T_h \text{ represents a straight line} $$
 
-For all a | b=
-```
+We can define a delta theta range which will allow room for error in the angle of the gradient space.
 
-![Untitled](59e947c9_Untitled.png)
+**Circle Detection:**
+
+$$ \text{1. For any pixel satisfying }|G(x,y)|>T_s\text{ increment all elements to satisfy} \\ \text{the following simultaneous equations: }\\\forall r, \begin{cases}x_0=x\pm r\cos\angle G \\ y_0=y\pm r\sin\angle G\end{cases}\\H(x_0,y_0,r)=H(x_0,y_0,r)+1\\\text{2. In the parameter space, any element }H(x_0,y_0,r)>T_h\text{ represents a circle}\\\text{with radius r located at }(x_0,y_0)\text{ in the image} $$
+
+<br/>
 
