@@ -19,15 +19,19 @@ In addition to this most of the parameters in a will be close enough to zero tha
 
 **Prediction:**
 
-$$ y(x)=a^T\begin{bmatrix}k(x_1,x)\\k(x_2,x)\\k(x_3,x)\end{bmatrix}\qquad x=\text{text data point} $$
+$$ y(x)=a^T\begin{bmatrix}k(x_1,x)\\k(x_2,x)\\k(x_3,x)\end{bmatrix}=a_1k(x_1,x)+a_2k(x_2,x)+a_3k(x_3,x) \\ x=\text{text data point} $$
 
-We must learn the parameter vector a without having to evaluate the feature vectors or we lose the benefit of using kernels.
+We must learn the parameter vector a without having to evaluate the feature vectors or we lose the benefit of using kernels. Kernel methods are ‘non-parametric’ because there are the same number of parameters as data points. In addition to this, we only have to care about parameters that have non-zero values, these are the dual coefficients and the corresponding data points are the support vectors.
+
+**The Gram Matrix**
+
+$$ \text{Gram Matrix: }K=\Phi \Phi^T $$
 
 $$ \text{Learning: }a=(K+\lambda I_N)^{-1}t $$
 
 **Classification:**
 
-During classification, there will be many different hyperplanes that will linearly separate the data. We can use a maximum margin classifier to choose the hyperplane that leads to the largest distance between the closest data point to the plane. This will help to reduce over fitting.
+During classification, there will be many different hyperplanes that will linearly separate the data. We can use a maximum margin classifier to choose the hyperplane that leads to the largest distance between the closest data point to the plane. This will help to reduce overfitting.
 
 $$ argmax_{w,b}\{\frac{1}{||w||}\min[t_n(w^T\phi(x_n)+b)]\} $$
 
