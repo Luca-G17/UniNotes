@@ -19,7 +19,7 @@ In addition to this most of the parameters in a will be close enough to zero tha
 
 **Prediction:**
 
-$$ y(x)=a^T\begin{bmatrix}k(x_1,x)\\k(x_2,x)\\k(x_3,x)\end{bmatrix}=a_1k(x_1,x)+a_2k(x_2,x)+a_3k(x_3,x) \\ x=\text{text data point} $$
+$$ y(x)=a^T\begin{bmatrix}k(x_1,x)\\k(x_2,x)\\k(x_3,x)\end{bmatrix}=a_1k(x_1,x)+a_2k(x_2,x)+a_3k(x_3,x) \\ x=\text{data point} $$
 
 We must learn the parameter vector a without having to evaluate the feature vectors or we lose the benefit of using kernels. Kernel methods are ‘non-parametric’ because there are the same number of parameters as data points. In addition to this, we only have to care about parameters that have non-zero values, these are the dual coefficients and the corresponding data points are the support vectors.
 

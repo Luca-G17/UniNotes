@@ -9,5 +9,3 @@ $$ \text{log likelihood = }\ln(p(X|\pi,\mu,\Sigma)=\sum_{n=1}^N\ln(\sum_{k=1}^K\
 
 - This has problems as this space will have lots of local maxima.
 
-- 
-
