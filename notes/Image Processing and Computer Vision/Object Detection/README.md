@@ -23,7 +23,7 @@ Object Detection = Classification + Localisation
 
 **Colour Based Detection:**
 
-Map 3D spacec to RGB space and cluster. Map this clustering back to image space.
+Map 3D space to RGB space and cluster. Map this clustering back to image space.
 
 **Morphological Operations:**
 
