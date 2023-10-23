@@ -1,27 +1,27 @@
 # Coevolution
-Orgasisms in the real world compete with each other and cooperate with other organisms in their environment. Coevolution is the kind of evolution that happens when multiple species interact. 
+Organisms in the real world compete with each other and cooperate with other organisms in their environment. Coevolution is the kind of evolution that happens when multiple species interact. 
 
-Coevolution = An automatic fitness function, each organism has to do well in the precsence of other species. 
+Coevolution = An automatic fitness function, each organism has to do well in the presence of other species. 
 
 Coevolution = An implicit fitness function its also dynamic.
 
 **Cooperative Coevolution:**
 
-- Each population deals with a seperate part of the overall problem
+- Each population deals with a separate part of the overall problem
 
-- A solution combines individual from each population
+- A solution combines individuals from each population
 
 - Appropriate when the overall problem is highly structured
 
 **Competitive Coevolution:**
 
-- One population of solutions to the problem that we are intersted in coevolves against a population of challengers.
+- One population of solutions to the problem that we are interested in coevolves against a population of challengers.
 
 - Solutions are fit if they defeat many challengers
 
 - Challengers are fit if they defeat many solutions
 
-	- Reminiscent of natural host-parasite or predator-preye coevolution
+	- Reminiscent of natural host-parasite or predator-prey coevolution
 
 <br/>
 
