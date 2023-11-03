@@ -41,5 +41,5 @@ The complete HMM can be defined by the joint distribution over observations and 
 
 $$ p(X,Z|A,\pi,\phi)=p(z_1,\pi)\prod_{n=2}^Np(z_n|z_{n-1},A)\prod_{n=1}^Np(x_n|z_n,\phi) \\ {} \\ A, \pi, \phi \text{ are parameters that must be learned}  $$
 
-/’#
+<br/>
 

@@ -35,5 +35,5 @@ $$ p(z)=\mathcal{N}(z|0,1) \\\text{The distribution of the observed data conditi
 
 W is a DxM matrix where D is the dimension of the data and M is the dimension of the PCA space where M ≤ D. We can then use MLE to maximise the likelihood of X given the parameters above. These will be eigenvectors and eigenvalues of the sample covariance matrix. We may still resort to **Expectation Maximisation **if the sample covariance matrix is huge or if we have missing data.
 
-xzxz
+<br/>
 
