@@ -31,8 +31,6 @@ Agents sense the environment they perceive the result from their sensors then th
 
 ---
 
-<br/>
-
 **Properties of intelligent agents:**
 
 - Reactivity
@@ -70,8 +68,6 @@ Social ability in agents is the ability to interact with other agents via a comm
 - Cooperate
 
 ---
-
-<br/>
 
 ## Environment:
 
@@ -111,7 +107,7 @@ Static environments remain unchanged except by the performance of actions by the
 
 Dynamic environments can be changed by other agents or processes.
 
-<br/>
+---
 
 **Sociotechnical System:**
 
@@ -121,9 +117,35 @@ An STS is not a separate running entity but it is realised through the interacti
 
 <br/>
 
-Norm - A directed social expectation between principals, defines a standard of correctness
+Norm - A directed social expectation between principals, defines a standard of correctness, types include commitment, prohibition, authorization and power.
 
 Accountability - A principal can call another to account for its actions, derives from norms and provides opportunity for principals to explain their actions
+
+More formally a norm is a tuple $ \left < \text{n}, \text{SBJ}, \text{ant},\text{con} \right > $
+
+$$ n:\text{its type - commitment, prohibition, authorization, power} \\ \text{SBJ} \in \R: \text{Subject} \\ \text{OBJ} \in \R : \text{Object} \\ \text{ant} \in \text{Expr} : \text{Antecedent} \\ \text{con} \in \text{Expr} : \text{consequent} $$
+
+**Commitment:**
+
+The subject is committed to the object that when the antecedent holds, the subject will bring about the consequent. The accountable party is the subject of the norm.
+
+![Untitled](ce673d03_Untitled.png)
+
+**Prohibition:**
+
+The subject is prohibited by the object that when the antecedent holds, the subject will not bring about the consequent. The accountable party is the subject.
+
+![Untitled](96c548fb_Untitled.png)
+
+**Authorization:**
+
+The subject is authorized by the object that when the antecedent holds, the subject can bring about the consequent. The accountable party is the object, they are responsible for the state of the antecedent.
+
+![Untitled](d85c3787_Untitled.png)
+
+**Power:**
+
+The object empowers the subject to bring about the consequent by bringing about the antecedent. A power is the ability to alter the norms between two or more principals.
 
 <br/>
 
