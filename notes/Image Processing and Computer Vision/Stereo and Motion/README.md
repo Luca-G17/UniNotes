@@ -3,13 +3,13 @@ Objects appear in different positions from different viewpoints - parallax
 
 Disparity = Position difference, inversely proportional to depth
 
-If we know disparity and viewpints we can infer 3D scene structure.
+If we know disparity and viewpoints we can infer 3D scene structure.
 
 <br/>
 
 **Epipolar Geometry:**
 
-Geometry depends on postion and orientation of cameras.
+Geometry depends on position and orientation of cameras.
 
 <br/>
 
@@ -47,11 +47,11 @@ $$ T=\text{3D Camera Position Vector} \qquad R=\text{3D Camera Rotation Matrix} 
 
 $$ \text{Note: For rotation matrices: }R^T=R^{-1} $$
 
-**Homogenious Coordinates:**
+**Homogenous Coordinates:**
 
 We can define rotation and translation in a single 4x4 matrix
 
-$$ \text{Camera To World = }H_{CW}\\P'_W=\begin{bmatrix}X_W \\ Y_W \\ Z_W \\ 1\end{bmatrix}=\begin{bmatrix} P_W \\ 1\end{bmatrix}=\begin{bmatrix}R^T& T \\ 0 & 1\end{bmatrix}=H_{CW}P'_c\implies P_W=R^TP_C+T $$
+$$ \text{Camera To World = }H_{CW}\\P'_W=\begin{bmatrix}X_W \\ Y_W \\ Z_W \\ 1\end{bmatrix}=\begin{bmatrix} P_W \\ 1\end{bmatrix}=\begin{bmatrix}R^T& T \\ 0 & 1\end{bmatrix}\begin{bmatrix}P_C \\ 1\end{bmatrix}=H_{CW}P'_c\implies P_W=R^TP_C+T $$
 
 $$ H_{WC}=\begin{bmatrix} R & -RT \\ 0 & 1\end{bmatrix}\implies P_C=R(P_W-T) $$
 

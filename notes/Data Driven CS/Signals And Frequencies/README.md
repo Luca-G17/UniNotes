@@ -117,7 +117,7 @@ The centre of a Fourier space represents the lowest frequencies in the image, i.
 
 **Filtering Fourier Frequencies:**
 
-![Untitled](8158b05a_Untitled.png)
+![Untitled](836bf2a6_Untitled.png)
 
 For example, low-pass filtering will smooth an image by reducing the high frequencies
 
