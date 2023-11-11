@@ -71,5 +71,5 @@ All points in the view plane satisfy the constraint above. RS is known as the es
 
 $$ E=RS \qquad P^T_REP_L=0 \\ P_L=\frac{Z_Lp_L}{f} \qquad P_R=\frac{Z_Rp_R}{f} \\p_R^TEp_L=0 \\ \text{Therefore the two D points in the view plane also satisfy this property} $$
 
-<br/>
+$$   I= \begin{cases} \text{No Intersection} & d < 0 \\ \text{One Intersection Point} & d = 0 \\ \text{Two Intersection Points} & d > 0 \end{cases} $$
 

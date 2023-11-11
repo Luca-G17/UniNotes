@@ -41,7 +41,7 @@ $$ x=\{x_i\}\in R^d $$
 
 preserves most of the information or structure in R^N.
 
-![Untitled](48529e6a_Untitled.png)
+![Untitled](4b688cb9_Untitled.png)
 
 The Eigenvectors and Eigenvalues define the principal axes and spread of points along directions
 

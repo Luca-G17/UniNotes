@@ -33,7 +33,7 @@ For multidimensional data:
 
 ![Untitled](c92f2581_Untitled.png)
 
-![Untitled](98db854c_Untitled.png)
+![Untitled](8fc6728e_Untitled.png)
 
 A covariance matrix is always square and symmetric, with variance on the diagonal, covariance between each pair of dimensions is stored on the non-diagonal elements.
 
