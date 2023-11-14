@@ -41,7 +41,7 @@ Edges occur in images when there is a change in the intensity function. The grad
 
 <br/>
 
-![Untitled](4d676436_Untitled.png)
+![Untitled](02ae437d_Untitled.png)
 
 Convultion in the spatial domain is equivalent to multiplication in the frequency domain and vice versa.
 

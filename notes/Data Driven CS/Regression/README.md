@@ -65,7 +65,7 @@ $$ \underline{x}(x)= \begin{bmatrix} \delta_1{(x)} \\ \delta_2{(x)} \\ \delta_3{
 
 $$ \hat{y}(x)=w^T\underline{x}(x) $$
 
-![Untitled](faddd31b_Untitled.png)
+![Untitled](3b1b4939_Untitled.png)
 
 **Over fitting, Regularisation and Cross-Validation:**
 

@@ -21,7 +21,7 @@ Using multiple features for classification results in a multi-dimensional featur
 
 	[//]: # (column is not supported)
 
-		![Untitled](e2d8094e_Untitled.png)
+		![Untitled](a680eda9_Untitled.png)
 
 Speech Recognition:
 

@@ -129,7 +129,7 @@ In contrast to this, a high-pass filter will sharpen an image by reducing the lo
 
 <br/>
 
-![Untitled](46b54cd8_Untitled.png)
+![Untitled](2996ae94_Untitled.png)
 
 <br/>
 
