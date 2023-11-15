@@ -35,7 +35,7 @@ $$ g(x,y)=\sum_{m=-1}^1\sum_{n=-1}^1f(x-m, y-n)h(m,n) $$
 
 $$ g(x,y)=\sum_{m=-1}^1\sum_{n=-1}^1f(x+m, y+n)h(m,n) $$
 
-![Untitled](7a1b1ba3_Untitled.png)
+![Untitled](75454054_Untitled.png)
 
 Edges occur in images when there is a change in the intensity function. The gradient points in the direction of the most rapid change in intensity.
 
@@ -45,5 +45,5 @@ Edges occur in images when there is a change in the intensity function. The grad
 
 Convultion in the spatial domain is equivalent to multiplication in the frequency domain and vice versa.
 
-![Untitled](3f3c88d5_Untitled.png)
+![Untitled](7eec9ef9_Untitled.png)
 

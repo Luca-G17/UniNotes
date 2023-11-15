@@ -1,7 +1,7 @@
 # Feature Classification
 The combination of d features is represented as a d-dimensions feature vector. This vector defines a point in the feature space. Good classifying features are ones that are linearly separable.
 
-![Untitled](c751c1b3_Untitled.png)
+![Untitled](54d3a398_Untitled.png)
 
 **Dimensionally Reduction:**
 

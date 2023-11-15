@@ -31,7 +31,7 @@ $$ o^2=\frac{1}{N-1}\sum_{i=1}(v_i-\mu)^2 $$
 
 For multidimensional data:
 
-![Untitled](c92f2581_Untitled.png)
+![Untitled](0bfa38b8_Untitled.png)
 
 ![Untitled](8fc6728e_Untitled.png)
 
@@ -53,7 +53,7 @@ $$ det(A-\lambda I)=0 $$
 
 $$ p(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma ^2}} $$
 
-![Untitled](a47dfc23_Untitled.png)
+![Untitled](5a84e916_Untitled.png)
 
 **Data Normalisation:**
 

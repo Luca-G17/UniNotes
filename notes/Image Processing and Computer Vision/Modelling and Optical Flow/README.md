@@ -23,5 +23,5 @@ $$ \text{For image point p } = (x, y, f) \qquad \text{Motion field v}=(v_x, v_y)
 
 ![Untitled](c45290ec_Untitled.png)
 
-A rotation without translation is independent of the depth
+A rotation without translation is independent of the depth.
 

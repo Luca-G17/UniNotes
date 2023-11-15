@@ -17,7 +17,7 @@ Using multiple features for classification results in a multi-dimensional featur
 
 	[//]: # (column is not supported)
 
-		![Untitled](2b8786b7_Untitled.png)
+		![Untitled](e54475e1_Untitled.png)
 
 	[//]: # (column is not supported)
 

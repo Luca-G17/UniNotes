@@ -103,17 +103,17 @@ $$ F(u,v)=F^*(-u,-v) $$
 
 Separability a matrix can be separated into 2 one dimensional vectors that are multiplied together. If a 2D transform is separable the result can be found by successive applications of two 1D transforms, this is the principle of a fast Fourier transform.
 
-![Untitled](2c908036_Untitled.png)
+![Untitled](0f5f7567_Untitled.png)
 
 **Rotations**
 
 Rotating the image will also rotate the Fourier space
 
-![Untitled](85c7564e_Untitled.png)
+![Untitled](928c82d7_Untitled.png)
 
 The centre of a Fourier space represents the lowest frequencies in the image, i.e. the lowest change in colours across the image. The outer points of the Fourier space represent the higher frequencies in the image which produces the detail in the image as there is a high amount of colour changing. 
 
-![Untitled](8bdb4e8d_Untitled.png)
+![Untitled](5f9818f1_Untitled.png)
 
 **Filtering Fourier Frequencies:**
 

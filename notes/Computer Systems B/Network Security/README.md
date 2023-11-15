@@ -55,7 +55,7 @@ Using packet sniffing, attackers monitor session traffic and intercept cookies a
 
 When the attacker is on the same network as the client, the attacker can sniff TCP packets and know the ACK/SEQ numbers. Attackers can then inject a packet with the correct ACK/SEQ numbers with a spoofed IP address. 
 
-![Untitled](8f4f4c4e_Untitled.png)
+![Untitled](02083306_Untitled.png)
 
 **SYN Flooding Attack:**
 

@@ -87,7 +87,7 @@ A contract between two entities detailing security parameters used for communica
 
 - Internet Key Exchange protocol (IKE)
 
-![Untitled](868b88e8_Untitled.png)
+![Untitled](9e35df36_Untitled.png)
 
 **Virtual Private Network:**
 
