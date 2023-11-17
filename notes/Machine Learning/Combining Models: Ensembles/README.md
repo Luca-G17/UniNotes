@@ -71,7 +71,7 @@ $$ w^1_n=\frac{1}{N} $$
 
 1. Compute the weighted error rate of model m:
 
-$$ \epsilon_m\frac{\sum_{n=1}^Nw^m_n[y_m(x_n\ne y(x_n)]}{\sum_{n=1}^Nw^m_n} $$
+$$ \epsilon_m=\frac{\sum_{n=1}^Nw^m_n[y_m(x_n\ne y(x_n)]}{\sum_{n=1}^Nw^m_n} $$
 
 1. Update the wieght for each data point n
 
@@ -143,5 +143,37 @@ $$ C(T)=\sum_{\tau=1}^{|\Tau|}e_\tau(T)+\lambda|T| \\ \text{if }C(T) \le C(T_0) 
 
 - The sequence of decisions is often easier to interpret in decision trees than in neural networks. However, sometimes small changes to the dataset cause big changes to the tree.
 
-- If the non-optimal decision boundary is not aligned with the axes of an input variable we may need lots of splits.hyfyhfyxdfykhdfxfdyhk
+- If the non-optimal decision boundary is not aligned with the axes of an input variable we may need lots of splits.
+
+**Random Forests - Adating Bagging to Trees:**
+
+WIth baggging base models make similar splits o the same features with the strongest predictors, meaning their errors are highly correlated.
+
+A random forest modifies the training procedure for each tree, m:
+
+- Randomly sample N data points with replacement from a training set with N data points
+
+- Learn the tree using greedy CART but when determining each split, consider only d ≤ D randomly chosen features
+
+- As with bagging combine predictions by taking the mean/majority vote.
+
+---
+
+**Conditional Mixture Models:**
+
+Performs a soft, probabilistic split of the feature space.
+
+**Mixture of Expert:**
+
+- Each datapoint is processed by a weighted combination of specialised export models.
+
+- Weights: Probabilities that depend on the features of x_n of the data point.
+
+- In contrast to a decision tree, which assigns each data point to a single leaf node.
+
+- The goal is to predict the target variable t_n given features x_n
+
+$$ p(t_n|x_n,\phi,\pi)=\sum_{k=1}^K\pi_k(x_n)p(t_n|x_n,\phi_k) \\ \pi_k(x_n):\text{Weight for model k in a combination of models} $$
+
+These weights can be learned as a part of EM.
 
