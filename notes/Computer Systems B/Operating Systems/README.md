@@ -181,10 +181,6 @@ This allows processes to be isolated from each, it supports virtual memory much 
 
 	- Page #
 
-		- Index in the page table
-
-		- Points to a physical address
-
 - Directory and page entry can be NULL, there is no need to materialize unneeded page tables
 
 - Virtual Address = | Directory → Directory entry → Page table | Page → Page Entry → Page number | Offset |
