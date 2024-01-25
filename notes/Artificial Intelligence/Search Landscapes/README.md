@@ -53,5 +53,5 @@ We can define the distance between points a and b in terms of how easy it is for
 
 - A set of points that lie of hill-climbing routes that terminate at one local optimum are said to lie within the **basin of attraction **of that local optima.
 
-- 
+<br/>
 
