@@ -85,6 +85,8 @@ In order to hide the complexity of the physical memory virtual memory is provide
 
 - If virtual memory addresses are V bits
 
+	- Amount of addressable locations = $ V^2 $
+
 - Running process see only virtual memory
 
 - Each process is isolated in its virtual memory and cannot address other processes’ virtual memory.
@@ -153,6 +155,10 @@ This allows processes to be isolated from each, it supports virtual memory much 
 
 - Segments may be very large
 
+	- Need to map the whole segment into memory even to access a single byte
+
+	- Cannot map only part of the segment that is utilized
+
 - Need to find free physical memory large enough to accommodate a segment
 
 - Explicit segment management is not very elegant
@@ -166,6 +172,18 @@ This allows processes to be isolated from each, it supports virtual memory much 
 - Maintaining a mapping between virtual pages and physical pages would be quite hard, for example, if we are using 32-bit addresses, there are 12 bits allocated for an offset which leaves 20 bits allocated for page numbers. $ 2^{20}=1048576 $  = page table entries.
 
 - Another level is added to the table in order to make this table easier to manage called the directory number
+
+	- Directory #
+
+		- Index in the page directory
+
+		- The entry point to the page table
+
+	- Page #
+
+		- Index in the page table
+
+		- Points to a physical address
 
 - Directory and page entry can be NULL, there is no need to materialize unneeded page tables
 
